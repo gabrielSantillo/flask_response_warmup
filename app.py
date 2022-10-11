@@ -16,7 +16,7 @@ def add_hero():
     if(type(results) == list):
         return make_response(json.dumps(results, default=str), 200)
     else:
-        return make_response(json.dumps(results, default=str), 400)
+        return make_response(json.dumps(results, default=str), 500)
 
 @app.post('/api/villain')
 def add_villain():
@@ -29,7 +29,7 @@ def add_villain():
     if(type(results) == list):
         return make_response(json.dumps(results, default=str), 200)
     else:
-        return make_response(json.dumps(results, default=str), 400)
+        return make_response(json.dumps(results, default=str), 500)
 
 @app.get('/api/hero')
 def get_all_heroes():
@@ -39,7 +39,7 @@ def get_all_heroes():
     if(type(results) == list):
         return make_response(json.dumps(results, default=str), 200)
     else:
-        return make_response(json.dumps(results, default=str), 400)
+        return make_response(json.dumps(results, default=str), 500)
 
 @app.get('/api/villain')
 def get_villain_hero():
@@ -52,6 +52,6 @@ def get_villain_hero():
     if(type(results) == list):
         return make_response(json.dumps(results, default=str), 200)
     else:
-        return make_response(json.dumps(results, default=str), 400)
+        return make_response(json.dumps(results, default=str), 500)
 
 app.run(debug=True)
